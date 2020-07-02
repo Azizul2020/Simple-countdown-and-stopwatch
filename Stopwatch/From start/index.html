@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <style>
+        .time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        h1 {
+            font-size: 100px;
+            font-family: arial;
+        }
+        
+        button {
+            padding: 8px 50px;
+            background: tomato;
+            box-shadow: 1px 3px 2px black;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="time">
+        <h1>00 : 00 : 00</h1>
+
+        <div class="button">
+            <button class="startStop">Start</button>
+            <button class="reset">Reset</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

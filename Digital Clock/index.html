@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Clock</title>
+    <style type="text/css">
+	body{background: linear-gradient(to Right,#654a4a,#b5965e,orange);}
+        h1.show {
+            text-align: center;
+            line-height: 97px;
+            font-family: Stencil Std;
+            font-size: 51px;
+            background: linear-gradient(white, #efe5e5);
+            width: 400px;
+            height: 100px;
+            padding: 0px 47px;
+            text-align: center;
+            margin: auto;
+            border-radius: 23px;
+            color: #4e4945;
+			margin-top:210px;
+        }
+        
+        sub {
+            font-size: 15px;
+            font-family: arial;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="show"></h1>
+    <script type="text/javascript">
+        setInterval(function() {
+            var time = new Date();
+            var hour = time.getHours();
+            var minute = time.getMinutes();
+
+            var second = time.getSeconds();
+			var session="AM";
+            if (minute < 10) {
+                minute =
+                    "0" + minute;
+            } else {
+                minute = minute;
+            }
+            if (hour < 10) {
+                hour =
+                    "0" + hour;
+            } else {
+                hour = hour;
+            }
+            if (second < 10) {
+                second =
+                    "0" + second;
+            } else {
+                second = second;
+            }
+			if(hour>12){
+				hour=hour-12;
+				session="PM";
+			}
+            var h1 = document.querySelector('h1');
+            h1.innerHTML = hour + " : " + minute + " : " + second+" "+session;
+
+        }, 1000);
+    </script>
+</body>
+
+</html>

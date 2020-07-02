@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input time stopwatch</title>
+    <style>
+        .input-area {
+            margin: auto;
+            padding: 50px 100px;
+            display: flex;
+        }
+        
+        input.minute {
+            padding: 13px 20px;
+            background: #ce762b;
+            border-radius: 15px;
+            font-size: 23px;
+            outline: none;
+            color: white;
+            border: none;
+            margin-right: 20px;
+        }
+        
+        input.hour {
+            padding: 13px 20px;
+            background: #ce762b;
+            border-radius: 15px;
+            font-size: 23px;
+            outline: none;
+            color: white;
+            border: none;
+            margin-right: 20px;
+        }
+        
+        input.second {
+            padding: 13px 20px;
+            background: #ce762b;
+            border-radius: 15px;
+            font-size: 23px;
+            outline: none;
+            color: white;
+            border: none;
+        }
+        
+        .display_area {
+            display: flex;
+            width: 600px;
+            margin: auto;
+            flex-direction: column;
+        }
+        
+        h1 {
+            margin: auto;
+            color: white;
+            width: 70%;
+            text-align: center;
+            font-size: 30px;
+            background: linear-gradient(red, blue, green);
+            border-radius: 15px;
+            padding: 5px 10px;
+        }
+        
+        sub {
+            font-size: 22px
+        }
+        
+        input.startstop {
+            padding: 12px 20px;
+            background: tomato;
+            color: white;
+            font-size: 22px;
+            border: none;
+            border-radius: 15px;
+            outline: none;
+            cursor: pointer;
+            margin: 0px 10px;
+        }
+        
+        input.reset {
+            padding: 12px 20px;
+            background: tomato;
+            color: white;
+            font-size: 22px;
+            border: none;
+            border-radius: 15px;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input-area">
+        <input type="text" placeholder="Hour" class="hour">
+        <input type="text" placeholder="Minute" class="minute">
+        <input type="text" placeholder="Second" class="second">
+        <input type="submit" class="startstop" value="Start">
+        <input type="button" class="reset" value="Reset">
+    </div>
+    <div class="display_area ">
+        <h1>00
+            <sub> Hr </sub> : 00 <sub>min</sub>:00
+            <sub>sec</sub></h1>
+        <!-- <div class="btn ">
+            <button class="startstop ">Start</button>
+            <button class="reset ">Reset</button>
+        </div> -->
+    </div>
+    <script src="app.js "></script>
+
+</body>
+
+</html>

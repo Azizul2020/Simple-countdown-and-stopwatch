@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Countdown tutorial</title>
+	<style type="text/css">
+		h1{
+			text-align:center;
+			font-family:tahoma;
+			font-size:50px;
+			padding:60px 0px;
+			
+		}
+	
+	
+	</style>
+</head>
+<body>
+	<h1></h1>
+	
+	
+<script type="text/javascript">
+	var h1=document.querySelector('h1');
+	var count=3600;
+	
+	function countD(s){
+		count--;
+		var min=Math.floor(s/60);
+		var sec=s%60;
+		if(sec<10){sec='0'+sec;}
+		if(min<10){
+			min='0'+min;
+		}
+		return min+' : '+sec;
+		
+	}
+		setInterval(function(){
+		h1.innerHTML=countD(count);
+		
+		
+		},1000);
+	<!-- setInterval(,1000); -->
+	
+</script>
+</body>
+</html>
